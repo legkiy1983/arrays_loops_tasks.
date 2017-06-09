@@ -1,13 +1,25 @@
 <?php
-for($i=0; $i<10; $i++) {
-    $arr[$i] = rand(0,10);
+$arr = array();
+for ($i=0; $i<=20; $i++) {
+    $arr[] = rand(0, 30);
 }
-print_r($arr);
-$max_arr=max($arr);
-$min_arr=min($arr);
 
-$max_arr=$min_arr+$max_arr;//1+10
-$min_arr=$max_arr-$min_arr;//11-1
-$max_arr=$max_arr-$min_arr;//11-10
-echo $max_arr."\n";
-echo $min_arr;
+echo "<pre>";
+    print_r($arr);
+echo "<pre>";
+
+$min_value = min($arr);
+$max_value = max($arr);
+
+foreach($arr as $key=> $value){
+    if($value == $min_value){
+        $arr[$key] = $max_value;
+    }
+    if($value == $max_value){
+        $arr[$key] = $min_value;
+    }
+}
+
+echo "<pre>";
+    print_r($arr);
+echo "<pre>";
