@@ -1,7 +1,7 @@
 <?php
-$arr=array(26, 17, 136, 12, 79, 15);
-$result=0;
-foreach($arr as $ar){
-$result += $ar  ;
+$result = 0;
+$arr = array(26, 17, 136, 12, 79, 15);
+foreach ($arr as $var) {
+    $result += $var * $var;
 }
-echo $result*$result;
+echo $result;
