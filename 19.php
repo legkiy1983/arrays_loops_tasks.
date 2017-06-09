@@ -1,12 +1,10 @@
 <?php
-
-$arr = array(1, 2, 3, 4, 5, 6, 7);
-foreach ($arr as $ar) {
-    $day = date('N');
-    if ($ar == $day) {
-        echo "<b>$ar</b><br>";
+$arr = array('Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье');
+foreach ($arr as $var) {
+    $day = 'Вторник';
+    if ($var == $day) {
+        echo "<i>$day</i> ";
     } else {
-        echo $ar . "<br>";
+        echo "$var ";
     }
 }
-$i=1;
